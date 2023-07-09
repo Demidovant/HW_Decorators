@@ -1,1 +1,1 @@
-# HW_Decorators
+# Домашнее задание к лекции 3. «Decorators»
