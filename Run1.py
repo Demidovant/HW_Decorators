@@ -3,14 +3,12 @@ import datetime
 
 
 def logger(old_function):
-    ...
-
     def new_function(*args, **kwargs):
         call_time = datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')
         result = old_function(*args, **kwargs)
         with open('main.log', 'a', encoding='utf-8') as log_file:
             log_file.write(
-                f'''Время вызова функции - {call_time}
+f'''Время вызова функции - {call_time}
 имя функции - {old_function.__name__}
 аргументы функции - {args, kwargs}
 значение функции - {result}\n
